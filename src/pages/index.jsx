@@ -492,7 +492,7 @@ export default function Home() {
           <EasyLineAddBottom>
             <LineAddText>まずは<span>LINE@友達追加</span>をしましょう！<br/>
             チャット内から面談日程の調整を行います♪</LineAddText>
-            <LineAdd>LINE@ 友達追加</LineAdd>
+            <LineAdd><a href="https://line.me/R/ti/p/@842zcnjv" target="_blank" rel="noreferrer noopener">LINE＠ 友達追加</a></LineAdd>
             <NewTextCover>
               <dt>NEW</dt>
               <dd>Zoom面談も可能です。</dd>
