@@ -420,7 +420,7 @@ export default function Home() {
     <Container>
       <FollowLineButton>
         <FollowLineButtonTop>LINEから簡単応募してみる</FollowLineButtonTop>
-        <FollowLineButtonBottom><a href="/https://line.me/R/ti/p/@842zcnjv" target="_blank" rel="noreferrer noopener">LINE＠ 友達追加</a></FollowLineButtonBottom>
+        <FollowLineButtonBottom><a href="https://line.me/R/ti/p/@842zcnjv" target="_blank" rel="noreferrer noopener">LINE＠ 友達追加</a></FollowLineButtonBottom>
       </FollowLineButton>
 
       <MainCover>
