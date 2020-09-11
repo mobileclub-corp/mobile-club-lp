@@ -5,9 +5,9 @@ import '../../assets/styles/reset.css';
 
 import TopImage from '../../assets/images/sp/top-lp.png';
 import FiveReasonImage from '../../assets/images/sp/5reason.png';
-import TwitterIcon from '../../assets/images/sp/twitterIcon.png';
-import FacebookIcon from '../../assets/images/sp/facebookIcon.png';
-import InstagramIcon from '../../assets/images/sp/instagramIcon.png';
+// import TwitterIcon from '../../assets/images/sp/twitterIcon.png';
+// import FacebookIcon from '../../assets/images/sp/facebookIcon.png';
+// import InstagramIcon from '../../assets/images/sp/instagramIcon.png';
 
 const Container = styled.div`
   position: relative;
@@ -399,12 +399,12 @@ const FooterTitle = styled.h3`
   line-height: 45px;
 `
 
-const SnsIconCover = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  width: 160px;
-  margin: 30px auto 40px;
-`
+// const SnsIconCover = styled.ul`
+//   display: flex;
+//   justify-content: space-between;
+//   width: 160px;
+//   margin: 30px auto 40px;
+// `
 
 const CopyrightCover = styled.div`
   font-family: YuGothic;
@@ -575,11 +575,11 @@ export default function Home() {
 
       <Footer>
         <FooterTitle>Mobile Club</FooterTitle>
-        <SnsIconCover>
+        {/* <SnsIconCover>
             <li><img src={TwitterIcon} alt=""></img></li>
             <li><img src={FacebookIcon} alt=""></img></li>
             <li><img src={InstagramIcon} alt=""></img></li>
-        </SnsIconCover>
+        </SnsIconCover> */}
 
         <CopyrightCover>© Copyright 2020. All rights reserved.</CopyrightCover>
       </Footer>
