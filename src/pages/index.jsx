@@ -237,6 +237,12 @@ const HowToEarnCover = styled.section`
   padding: 56px 28px;
   text-align: center;
   background-color: #f8a6ae;
+`
+
+const HowToEarn = styled.div`
+  &:not(first-of-type) {
+    margin-top: 28px;
+  }
 
   > h2 {
     color: #fff;
@@ -254,7 +260,6 @@ const HowToEarnList = styled.ul`
   flex-direction: column;
   justify-content: center;
   width: 300px;
-  height: 225px;
   margin: 15px 38px;
   padding: 15px;
   box-sizing: border-box;
@@ -282,6 +287,14 @@ const HowToEarnList = styled.ul`
       text-align: right;
     }
   }
+`
+
+const HowToEarnListContent = styled.div`
+  margin: 20px 0;
+`
+
+const HowToEarnListNote = styled.div`
+  margin-top: 20px;
 `
 
 // モバクラが選ばれる5つの理由
@@ -453,14 +466,35 @@ export default function Home() {
           </WhatsMobileClubText>
         </WhatsMobileClubCover>
         <HowToEarnCover>
-          <h2>モバクラでの<br/>
-          \キャストの稼ぎ方/</h2>
-          <HowToEarnList>
-            <li>1回の同伴：最大3万円<br/>
-            <span>(2時間半)</span></li>
-            <li>延長料金：5,000円<br/>
-            <span>(1時間)</span></li>
-          </HowToEarnList>
+          <HowToEarn>
+            <h2>モバクラでの<br/>
+            \キャストの稼ぎ方/</h2>
+            <HowToEarnList>
+              <li>1回の同伴：最大4万4千円<br/>
+              <span>(2時間半)</span></li>
+              <li>延長料金：5,000円<br/>
+              <span>(1時間)</span></li>
+            </HowToEarnList>
+          </HowToEarn>
+
+          <HowToEarn>
+            <h2>お給料は4ランク制!</h2>
+            <HowToEarnList>
+              <HowToEarnListContent>「男性のお客様」を紹介していただいた人数に応じて同半額が決定されます。</HowToEarnListContent>
+
+              <li>①Mobile  Queen<br/>
+              0人：1万1千円</li>
+              <li>②Mobile  legend<br/>
+              3人：2万2千円</li>
+              <li>③Mobile  VIP.<br/>
+              6人：3万3千円</li>
+              <li>④Mobile  premium<br/>
+              9人〜：4万4千円</li>
+
+              <HowToEarnListNote>※上記同半額は変動する場合があります。</HowToEarnListNote>
+              <HowToEarnListNote>※LINE公式アカウントを友達追加した後の登録審査で同半額が決定されます。</HowToEarnListNote>
+            </HowToEarnList>
+          </HowToEarn>
         </HowToEarnCover>
         <FiveReasonsCover>
           <div><img src={FiveReasonImage} alt=""></img></div>
