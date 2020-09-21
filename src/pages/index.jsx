@@ -49,7 +49,7 @@ const FollowLineButtonBottom = styled.div`
   justify-content: center;
   align-items: center;
   height: 52px;
-  font-family: Roboto;
+  font-family: "Hiragino Kaku Gothic Pro";
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
