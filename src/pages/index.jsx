@@ -235,7 +235,7 @@ const HowToEarnCover = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 56px 28px;
+  padding: 56px 28px 0;
   text-align: center;
   background-color: #f8a6ae;
 `
@@ -304,7 +304,7 @@ const HowToEarnSplitBorder = styled.div`
 const FiveReasonsCover = styled.section`
   display: flex;
   justify-content: center;
-  padding: 144px 0 0;
+  padding: 56px 0 0;
   background: #ffeaeb;
 `
 
