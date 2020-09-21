@@ -475,8 +475,7 @@ export default function Home() {
             <HowToEarnList>
               <li>1回の同伴：最大¥30,000<br/>
               <span>(2時間半)</span></li>
-              <li>延長料金：¥5,000<br/>
-              <span>(1時間)</span></li>
+              <li>延長料金：¥5,000(1時間)</li>
             </HowToEarnList>
           </HowToEarn>
 
