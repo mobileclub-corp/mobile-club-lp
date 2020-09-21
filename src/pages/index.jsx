@@ -4,6 +4,7 @@ import mediaquery from '../../assets/styles/variable';
 import '../../assets/styles/reset.css';
 
 import TopImage from '../../assets/images/sp/top-lp.png';
+import FourRunkImage from '../../assets/images/sp/4runk.png';
 import FiveReasonImage from '../../assets/images/sp/5reason.png';
 // import TwitterIcon from '../../assets/images/sp/twitterIcon.png';
 // import FacebookIcon from '../../assets/images/sp/facebookIcon.png';
@@ -272,7 +273,7 @@ const HowToEarnList = styled.ul`
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 30px;
     text-align: left;
 
@@ -289,12 +290,14 @@ const HowToEarnList = styled.ul`
   }
 `
 
-const HowToEarnListContent = styled.div`
-  margin: 20px 0;
-`
+const HowToEarnSplitBorder = styled.div`
+  display: flex;
+  justify-content: center;
 
-const HowToEarnListNote = styled.div`
-  margin-top: 20px;
+  > span {
+    width: 300px;
+    border-top: 1px solid #000;
+  }
 `
 
 // モバクラが選ばれる5つの理由
@@ -462,7 +465,7 @@ export default function Home() {
             <p>モバクラは、ホステスさんとお客様をオンライン上で結ぶマッチングサービスです。<br/>
           予約から決済までをサービス上で行い、お好きな飲食店でお食事をお楽しみください。</p>
           <p>またモバクラ独自の取り組みである「リアルの優良高級Club店からのスカウトメール」が届きます。</p>
-          <p>Webだけ、リアルのClub店との掛け持ちなど、あなたに合わせた働き方で収入を増やすことができます。</p>
+          <p>Webだけ、リアルのClub店との掛け持ちなど、コロナ禍に合わせた働き方で収入を増やすことができます。</p>
           </WhatsMobileClubText>
         </WhatsMobileClubCover>
         <HowToEarnCover>
@@ -470,30 +473,16 @@ export default function Home() {
             <h2>モバクラでの<br/>
             \キャストの稼ぎ方/</h2>
             <HowToEarnList>
-              <li>1回の同伴：最大4万4千円<br/>
+              <li>1回の同伴：最大¥30,000<br/>
               <span>(2時間半)</span></li>
-              <li>延長料金：5,000円<br/>
+              <li>延長料金：¥5,000<br/>
               <span>(1時間)</span></li>
             </HowToEarnList>
           </HowToEarn>
 
           <HowToEarn>
-            <h2>お給料は4ランク制!</h2>
-            <HowToEarnList>
-              <HowToEarnListContent>「男性のお客様」を紹介していただいた人数に応じて同半額が決定されます。</HowToEarnListContent>
-
-              <li>①Mobile  Queen<br/>
-              0人：1万1千円</li>
-              <li>②Mobile  legend<br/>
-              3人：2万2千円</li>
-              <li>③Mobile  VIP.<br/>
-              6人：3万3千円</li>
-              <li>④Mobile  premium<br/>
-              9人〜：4万4千円</li>
-
-              <HowToEarnListNote>※上記同半額は変動する場合があります。</HowToEarnListNote>
-              <HowToEarnListNote>※LINE公式アカウントを友達追加した後の登録審査で同半額が決定されます。</HowToEarnListNote>
-            </HowToEarnList>
+            <HowToEarnSplitBorder><span></span></HowToEarnSplitBorder>
+            <div><img src={FourRunkImage} alt=""></img></div>
           </HowToEarn>
         </HowToEarnCover>
         <FiveReasonsCover>
@@ -541,8 +530,7 @@ export default function Home() {
 
             <dt>どのくらい稼げるの?</dt>
             <dd>
-              <p>1回の同伴(2時間半)で¥30,000円から、チップや人気に応じて数万〜数十万くらいまでの幅があるのが一般的です。(一般的に"タク代飲み"や"ギャラ飲み"と同様以上の水準です。)</p>
-              <p>1日に何件も周り、"ハシゴ"をすることで月収~万円を超える方もいます。</p>
+              <p>1回の同伴(2時間半)で¥30,000から、チップや人気に応じて数万〜数十万くらいまでの幅があるのが一般的です。(一般的に"タク代飲み"や"ギャラ飲み"と同様以上の水準です。)</p>
               <p>自分の自由なタイミングで自分らしく稼げるのが魅力です。</p>
             </dd>
 
@@ -566,7 +554,7 @@ export default function Home() {
                 <dt>【キャスト側】</dt>
                 <dd>
                   <p>ホステス経験者さん、20代・30代のOLさん、自身の接待能力のキャリアを活用したい方に参加いただいています。</p>
-                  <p>人気の人は毎日のように何件も呼ばれるようになったりします。</p>
+                  <p>人気の方は毎日のように何件もお声掛けいただけるようになります。</p>
                 </dd>
               </UnderstandMobileClubTextList>
             </dd>
@@ -582,13 +570,13 @@ export default function Home() {
                 <dd>少しの遅刻や事前に連絡がある場合はもちろん大丈夫ですが、毎回ドタキャンや遅刻だとゲスト様が困ってしまいます。最低限のマナーとして心がけましょう。</dd>
 
                 <dt>■人と話せる</dt>
-                <dd>愛嬌がよく、人と楽しくお話ができて、相手を気持ちよくできる人が最高です。楽しくお話しすることで、お互いにwin-winの関係ができるのです。</dd>
+                <dd>当然ですが、人と楽しくお話ができ、愛想がよく、相手を気持ちよくできる人が最高です。楽しくお話しすることで、お互いにwin-winの関係を構築しましょう。</dd>
 
                 <dt>■話が聞ける</dt>
-                <dd>あまり喋ることが得意でない人も、聞き上手なら大丈夫です。人間誰しも自分の話を聞いて欲しいもの。聞き上手な方は大変喜ばれます。</dd>
+                <dd>あまり喋ることが得意でない方も、聞き上手なら大丈夫です。人間誰しも自分の話を聞いてもらえれば嬉しいもの。聞き上手な人は大変喜ばれます。</dd>
 
                 <dt>■空気が読める</dt>
-                <dd>どんな場面でも空気を読めることは大事ですよね。（飲む場面、落ち着いて話す場面、楽しませる場面など）</dd>
+                <dd>どんな場面でも空気を読めることは大切ですよね。（飲む場面、落ち着いて話す場面、楽しませる場面など、その場面のTPOを理解できることです）</dd>
 
                 <dt>■お酒が飲める</dt>
                 <dd>お酒は飲めないより飲める方が、お相手できる方の幅が広がります。もちろん飲めなくてもOK。何よりその場の雰囲気を一緒に楽しめる方が大切ですね。</dd>
@@ -597,9 +585,10 @@ export default function Home() {
 
             <dt>こんなメリット?</dt>
             <dd>
-              <p>お小遣いが稼げるだけじゃないこんなメリットもあるのがモバクラ。</p>
-              <p>富裕層や経営者などどお知り合いになれます。<br/>
-              名だたる大企業の社長や、新進気鋭のベンチャー経営者などが多く使っているので、普段は出会うことのできない人々と出会うことができます。普段の生活ではなかなか聞くことができないような話を伺えます。</p>
+              <p>お小遣いが稼げるだけじゃないこんなメリットもあるのがモバクラです。</p>
+              <p>富裕層や経営者などとお知り合いになれます。<br/>
+              名だたる大企業の社長や、新進気鋭のベンチャー経営者などが多く利用されていますので、普段は出会うことのできない方々との交流があります。</p>
+              <p>普段の生活ではなかなか聞くことができない、社会勉強の場でもあります。</p>
               <p>またモバクラ独自の取り組みである「リアルの優良高級Club店からのスカウトメール」で採用されれば収入が限りなく安定します。</p>
               <p>Webだけ、リアルのClub店との掛け持ちなど、あなたに合わせた働き方で収入を増やすことができます。</p>
             </dd>
