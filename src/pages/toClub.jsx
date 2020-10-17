@@ -174,17 +174,17 @@ const LineAdd = styled.div`
   }
 `
 
-// モバクラはどんなサービス?
+// WEB上に出店?? それってどういうこと?!
 const WhatsMobileClubCover = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 45px 0 70px;
+  padding: 80px 0 70px;
   color: #000;
   background: #ffeaeb;
 
   > h2 {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-family: Hiragino Kaku Gothic Pro;
     font-style: normal;
     font-weight: bold;
@@ -336,7 +336,7 @@ const HowManyProfitText = styled.div`
 
 // 働くって具体的に 何をしたらいいの?
 const AboutStepCover = styled.section`
-  padding: 45px 0;
+  padding: 60px 0px;
   text-align: center;
 `
 

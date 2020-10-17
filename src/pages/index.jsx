@@ -204,17 +204,17 @@ const NewTextCover = styled.dl`
   }
 `
 
-// モバクラはどんなサービス?
+// 女性登録者に とってのモバクラとは
 const WhatsMobileClubCover = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 45px 0;
+  padding: 80px 0px;
   color: #000;
   background: #ffeaeb;
 
   > h2 {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-family: Hiragino Kaku Gothic Pro;
     font-style: normal;
     font-weight: bold;
@@ -323,12 +323,12 @@ const FiveReasonsCover = styled.section`
 
 // 働くって具体的に 何をしたらいいの?
 const AboutStepCover = styled.section`
-  padding: 45px 0;
+  padding: 60px 0px;
   text-align: center;
 `
 
 const AboutStepTitle = styled.h2`
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   font-family: Hiragino Kaku Gothic Pro;
   font-style: normal;
   font-weight: bold;
@@ -390,7 +390,7 @@ const UnderstandMobileClubTitle = styled.h2`
 `
 
 const UnderstandMobileClubList = styled.dl`
-  padding: 45px 28px;
+  padding: 60px 28px;
 
   > dt {
     font-family: Hiragino Kaku Gothic Pro;
@@ -552,7 +552,8 @@ export default function Home() {
 
           <AboutStep>
             <figure><img src={StepImage_03} alt=""></img></figure>
-            <figcaption>指定した場所で待ち合わせ</figcaption>
+            <figcaption>指定した場所で待ち合わせ<br />
+            ※ここからお給料が発生します</figcaption>
           </AboutStep>
         </AboutStepCover>
         <FiveReasonsCover>
