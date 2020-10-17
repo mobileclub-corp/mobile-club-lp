@@ -31,7 +31,6 @@ const HeaderText = styled.div`
 `
 
 const MainCover = styled.main`
-  background: #ffeaeb;
 `
 
 // Top
@@ -46,6 +45,10 @@ const TopImageCover = styled.div`
 const VisionListCover = styled.dl`
   &:not(:first-of-type) {
     margin-top: 60px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 60px;
   }
 
   > dt {
@@ -68,7 +71,7 @@ const VisionListCover = styled.dl`
     font-family: YuMincho;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 27px;
     
     > p {
