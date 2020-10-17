@@ -255,6 +255,7 @@ const HowToEarnCover = styled.section`
   padding: 0 28px 0;
   text-align: center;
   background-color: #f8a6ae;
+  margin-bottom: 60px;
 `
 
 const HowToEarn = styled.div`
