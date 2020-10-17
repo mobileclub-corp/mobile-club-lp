@@ -179,12 +179,12 @@ const WhatsMobileClubCover = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0 70px;
+  padding: 100px 0 70px;
   color: #000;
   background: #ffeaeb;
 
   > h2 {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-family: Hiragino Kaku Gothic Pro;
     font-style: normal;
     font-weight: bold;
@@ -212,7 +212,7 @@ const NextToVisionCover = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 70px;
+  padding: 0 0 100px;
   text-align: center;
 `
 
@@ -352,7 +352,7 @@ const AboutStepTitle = styled.h2`
 `
 
 const AboutStep = styled.div`
-  margin: 20px 0;
+  margin: 40px 0px;
 
   > figcaption {
     margin: 10px 0;

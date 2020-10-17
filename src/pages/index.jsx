@@ -209,12 +209,12 @@ const WhatsMobileClubCover = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0px;
+  padding: 100px 0px;
   color: #000;
   background: #ffeaeb;
 
   > h2 {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-family: Hiragino Kaku Gothic Pro;
     font-style: normal;
     font-weight: bold;
@@ -338,7 +338,7 @@ const AboutStepTitle = styled.h2`
 `
 
 const AboutStep = styled.div`
-  margin: 20px 0;
+  margin: 40px 0;
 
   > figcaption {
     margin: 10px 0;
