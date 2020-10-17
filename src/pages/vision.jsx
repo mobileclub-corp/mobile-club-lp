@@ -35,11 +35,21 @@ const MainCover = styled.main`
 `
 
 // Top
-const TopImageCover = styled.div``
+const TopImageCover = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0px;
+`
 
 // vidion内容
 const VisionListCover = styled.dl`
+  &:not(:first-of-type) {
+    margin-top: 60px;
+  }
+
   > dt {
+    margin-bottom: 35px;
     font-family: YuMincho;
     font-style: normal;
     font-weight: 600;
@@ -50,6 +60,26 @@ const VisionListCover = styled.dl`
     color: #ff444f;
     mix-blend-mode: normal;
     text-align: center;
+  }
+
+  > dd {
+    width: 256px;
+    margin: 0 auto;
+    font-family: YuMincho;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    
+    > p {
+      &:not(:first-of-type) {
+        margin-top: 14px;
+      }
+
+      > span {
+        font-weight: bold;
+      }
+    }
   }
 `
 

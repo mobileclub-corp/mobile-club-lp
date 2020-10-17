@@ -196,7 +196,7 @@ const WhatsMobileClubCover = styled.section`
 
 const WhatsMobileClubText = styled.div`
   width: 320px;
-  font-family: Hiragino Kaku Gothic Pro;
+  font-family: YuMincho;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -229,7 +229,7 @@ const NextToVisionLink = styled(Link)`
 
 // モバクラでのキャストの稼ぎ方
 const HowToEarnTitle = styled.div`
-  font-family: "Hiragino Kaku Gothic Pro";
+  font-family: YuMincho;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
