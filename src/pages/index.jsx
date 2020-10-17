@@ -1,14 +1,20 @@
 import React from 'react';
+import { Link } from "gatsby";
 import styled from 'styled-components';
 import mediaquery from '../../assets/styles/variable';
 import '../../assets/styles/reset.css';
 
+import Header from '../components/header';
+
 import TopImage from '../../assets/images/sp/top-lp.png';
 import FourRunkImage from '../../assets/images/sp/4runk.png';
 import FiveReasonImage from '../../assets/images/sp/5reason.png';
-// import TwitterIcon from '../../assets/images/sp/twitterIcon.png';
-// import FacebookIcon from '../../assets/images/sp/facebookIcon.png';
-// import InstagramIcon from '../../assets/images/sp/instagramIcon.png';
+import StepImage_01 from '../../assets/images/toMan/step01.png';
+import StepImage_02 from '../../assets/images/toMan/step02.png';
+import StepImage_03 from '../../assets/images/toMan/step03.png';
+import TwitterIcon from '../../assets/images/sp/twitterIcon.png';
+import FacebookIcon from '../../assets/images/sp/facebookIcon.png';
+import InstagramIcon from '../../assets/images/sp/instagramIcon.png';
 
 const Container = styled.div`
   position: relative;
@@ -108,7 +114,7 @@ const TopTextCover = styled.div`
   font-weight: bold;
   font-size: 26px;
   line-height: 130.2%;
-  color: #fff;
+  color: #ff444f;
 `
 
 // LINEアカウント登録
@@ -214,6 +220,7 @@ const WhatsMobileClubCover = styled.section`
     font-weight: bold;
     font-size: 26px;
     line-height: 39px;
+    text-align: center;
   }
 `
 
@@ -231,20 +238,26 @@ const WhatsMobileClubText = styled.div`
 `
 
 // モバクラでのキャストの稼ぎ方
+const HowToEarnTitle = styled.div`
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 130.2%;
+  color: rgb(255, 68, 79);
+  text-align: center;
+`
+
 const HowToEarnCover = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 56px 28px 0;
+  padding: 0 28px 0;
   text-align: center;
   background-color: #f8a6ae;
 `
 
 const HowToEarn = styled.div`
-  &:not(first-of-type) {
-    margin-top: 28px;
-  }
-
   > h2 {
     color: #fff;
     font-family: Abhaya Libre;
@@ -306,6 +319,31 @@ const FiveReasonsCover = styled.section`
   justify-content: center;
   padding: 56px 0 0;
   background: #ffeaeb;
+`
+
+// 働くって具体的に 何をしたらいいの?
+const AboutStepCover = styled.section`
+  padding: 45px 0;
+  text-align: center;
+`
+
+const AboutStepTitle = styled.h2`
+  margin-bottom: 5px;
+  font-family: Hiragino Kaku Gothic Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 39px;
+  text-align: center;
+`
+
+const AboutStep = styled.div`
+  margin: 20px 0;
+
+  > figcaption {
+    margin: 10px 0;
+    line-height: 24px;
+  }
 `
 
 // 今すぐ簡単応募（LINE@）
@@ -415,12 +453,12 @@ const FooterTitle = styled.h3`
   line-height: 45px;
 `
 
-// const SnsIconCover = styled.ul`
-//   display: flex;
-//   justify-content: space-between;
-//   width: 160px;
-//   margin: 30px auto 40px;
-// `
+const SnsIconCover = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  margin: 30px auto 40px;
+`
 
 const CopyrightCover = styled.div`
   font-family: YuGothic;
@@ -434,6 +472,7 @@ const CopyrightCover = styled.div`
 export default function Home() {
   return (
     <Container>
+      <Header />
       <FollowLineButton>
         <FollowLineButtonTop>LINEから簡単応募してみる</FollowLineButtonTop>
         <FollowLineButtonBottom><a href="https://line.me/R/ti/p/@842zcnjv" target="_blank" rel="noreferrer noopener">LINE＠ 友達追加</a></FollowLineButtonBottom>
@@ -444,10 +483,10 @@ export default function Home() {
           <TopTitleCover>
             <h1>Mobile Club<br/>
             ワンランク上の稼ぎ方<br/>
-            <span>ホステスマッチングサービス</span></h1>
+            <span>出店×ホステスマッチングサービス</span></h1>
           </TopTitleCover>
 
-          <TopTextCover>＼月10万円の給料保証実施中／</TopTextCover>
+          <TopTextCover>＼2020.11.15リリース予定／</TopTextCover>
 
           <LineAddCover>
             <LineAddText>まずは<span>LINE@友達追加</span>をしましょう！<br/>
@@ -459,55 +498,65 @@ export default function Home() {
             </NewTextCover>
           </LineAddCover>
         </TopCover>
+
         <WhatsMobileClubCover>
-          <h2>モバクラはどんなサービス?</h2>
+          <h2>女性登録者に<br />
+          とってのモバクラとは?</h2>
           <WhatsMobileClubText>
-            <p>モバクラは、ホステスさんとお客様をオンライン上で結ぶマッチングサービスです。<br/>
-          予約から決済までをサービス上で行い、お好きな飲食店でお食事をお楽しみください。</p>
-          <p>またモバクラ独自の取り組みである「リアルの優良高級Club店からのスカウトメール」が届きます。</p>
-          <p>Webだけ、リアルのClub店との掛け持ちなど、コロナ禍に合わせた働き方で収入を増やすことができます。</p>
+            <p>ギャラ飲みは楽でいいけど、もう少し安定して働きたい、、、ホステスをしていたけどコロナで出勤が減ってしまい生活が苦しい、、、コロナ禍で苦労した女性は多いと思いのではないでか?<br />
+            そんな女性の為、安定して働く場所を提供したい!という想いで私たちはこのシステムを開発しました。</p>
           </WhatsMobileClubText>
         </WhatsMobileClubCover>
+        <HowToEarnTitle>＼お店に属しているから安心／</HowToEarnTitle>
         <HowToEarnCover>
           <HowToEarn>
-            <h2>モバクラでの<br/>
-            \キャストの稼ぎ方/</h2>
-            <HowToEarnList>
-              <li>1回の同伴：最大¥30,000<br/>
-              <span>(2時間半)</span></li>
-              <li>延長料金：¥5,000(1時間)</li>
-            </HowToEarnList>
-          </HowToEarn>
-
-          <HowToEarn>
-            <HowToEarnSplitBorder><span></span></HowToEarnSplitBorder>
             <div><img src={FourRunkImage} alt=""></img></div>
           </HowToEarn>
         </HowToEarnCover>
+        <AboutStepCover>
+          <AboutStepTitle>働くって具体的に<br />
+          何をしたらいいの？</AboutStepTitle>
+          <AboutStep>
+            <figure><img src={StepImage_01} alt=""></img></figure>
+            <figcaption>お店からスカウトがきます</figcaption>
+          </AboutStep>
+
+          <AboutStep>
+            <figure><img src={StepImage_02} alt=""></img></figure>
+            <figcaption>お店の人としっかり面談をして<br />
+            働くかどうか決めてもらいます</figcaption>
+          </AboutStep>
+
+          <AboutStep>
+            <figure><img src={StepImage_03} alt=""></img></figure>
+            <figcaption>お店が決定したら早速業務開始！</figcaption>
+          </AboutStep>
+
+          <AboutStep>
+            <figure><img src={StepImage_01} alt=""></img></figure>
+            <figcaption>男性登録者に指名されたら、、、<br />
+            (WEB店舗側がお客様を紹介してくれたりもします)</figcaption>
+          </AboutStep>
+
+          <AboutStep>
+            <figure><img src={StepImage_03} alt=""></img></figure>
+            <figcaption>メッセージで待合せする飲食店を決めます</figcaption>
+          </AboutStep>
+
+          <AboutStep>
+            <figure><img src={StepImage_02} alt=""></img></figure>
+            <figcaption>WEB店舗オーナーと<br />
+            運営側に待合せ場所を知らせてください<br />
+            （女性の安全確保の為）</figcaption>
+          </AboutStep>
+
+          <AboutStep>
+            <figure><img src={StepImage_03} alt=""></img></figure>
+            <figcaption>指定した場所で待ち合わせ</figcaption>
+          </AboutStep>
+        </AboutStepCover>
         <FiveReasonsCover>
           <div><img src={FiveReasonImage} alt=""></img></div>
-          {/* <h2>モバクラが選ばれる<span>5つの理由</span></h2>
-          <dl>
-            <dt><span>1</span>安心の決済システム</dt>
-            <dd>現金やり取り不要！<br/>
-            サービス上で決済まで完了するため、面倒なやり取りは発生しません。</dd>
-
-            <dt><span>2</span>審査制</dt>
-            <dd>厳正な審査の上キャストを採用させていただいております。<br/>
-            写真が悪用されたり、身バレしたりする心配もありません。</dd>
-
-            <dt><span>3</span>利用者は高年収層</dt>
-            <dd>ゲストは審査制で、ゆとりのある経営者・富裕層等の高年収層が中心です。</dd>
-
-            <dt><span>4</span>スカウト機能</dt>
-            <dd>モバクラに登録していただいている優良高級Club店からスカウトメッセージが届きます。<br/>
-            あなたに合わせたWebとリアル高級Club店とのやりがいのある働き方をご提供させていただきます。</dd>
-
-            <dt><span>5</span>月10万円の給料保証</dt>
-            <dd>ご登録から3ヶ月間、月10万円の給与保証をさせていただきます。<br/>
-            稼げるか不安な未経験の方でも安心。
-            <span>※ただし、登録後3ヶ月内に一切の店外同    伴実績がない方には給与保証はできかねます。</span></dd>
-          </dl> */}
         </FiveReasonsCover>
         <EasyLineAddCover>
           <EasyLineAddTop>今すぐ簡単応募！</EasyLineAddTop>
@@ -597,11 +646,11 @@ export default function Home() {
 
       <Footer>
         <FooterTitle>Mobile Club</FooterTitle>
-        {/* <SnsIconCover>
+        <SnsIconCover>
             <li><img src={TwitterIcon} alt=""></img></li>
             <li><img src={FacebookIcon} alt=""></img></li>
             <li><img src={InstagramIcon} alt=""></img></li>
-        </SnsIconCover> */}
+        </SnsIconCover>
 
         <CopyrightCover>© Copyright 2020. All rights reserved.</CopyrightCover>
       </Footer>
