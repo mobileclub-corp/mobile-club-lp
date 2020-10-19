@@ -7,6 +7,7 @@ import '../../assets/styles/reset.css';
 import Header from '../components/header';
 // sp用画像
 import TopImage from '../../assets/images/sp/top-lp.png';
+import FourRunkImage from '../../assets/images/toMan/4runk.png';
 import StepImage_01 from '../../assets/images/toMan/step01.png';
 import StepImage_02 from '../../assets/images/toMan/step02.png';
 import StepImage_03 from '../../assets/images/toMan/step03.png';
@@ -204,6 +205,28 @@ const IntroductionDescriptionCover = styled.dl`
     > p {
       text-align: left;
     }
+  }
+`
+
+const HowToEarnCover = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 28px;
+  text-align: center;
+  background-color: #f8a6ae;
+  margin-bottom: 60px;
+`
+
+const HowToEarn = styled.div`
+  > h2 {
+    color: #fff;
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 0.3em;
   }
 `
 
@@ -505,6 +528,11 @@ export default function ToMan() {
                 時間をご提供するシステムです。<br/>
                 お好みの女性、飲食店を選んで、<br/>
                 素敵なひと時をご堪能ください。</dd>
+                <HowToEarnCover>
+                  <HowToEarn>
+                    <div><img src={FourRunkImage} alt=""></img></div>
+                  </HowToEarn>
+                </HowToEarnCover>
                 <AboutStepCover>
                     <AboutStep>
                     <figure><img src={StepImage_01} alt=""></img></figure>
