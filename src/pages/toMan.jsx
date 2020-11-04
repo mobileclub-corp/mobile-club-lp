@@ -33,6 +33,7 @@ const FollowLineButton = styled.div`
   margin-left: 178px;
   padding: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 2;
 `
 
 const FollowLineButtonTop = styled.div`
@@ -302,7 +303,7 @@ const CurrentCover = styled.div`
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 45px 100vw;
+    border-width: 0 0 45px 118vw;
     border-color: transparent transparent #fff transparent;
   }
 `
@@ -475,6 +476,7 @@ const Footer = styled.div`
   color: #fff;
   background: #ff444f;
   box-sizing: border-box;
+  z-index: 3;
 
   ${mediaquery.desktop`
     max-width: 1280px;
