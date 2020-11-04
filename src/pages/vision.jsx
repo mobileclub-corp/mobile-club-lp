@@ -6,7 +6,7 @@ import '../../assets/styles/reset.css';
 
 import Header from '../components/header';
 
-import NoImage from '../../assets/images/vision/no-image.png';
+// import NoImage from '../../assets/images/vision/no-image.png';
 import TwitterIcon from '../../assets/images/sp/twitterIcon.png';
 import FacebookIcon from '../../assets/images/sp/facebookIcon.png';
 import InstagramIcon from '../../assets/images/sp/instagramIcon.png';
@@ -34,15 +34,17 @@ const MainCover = styled.main`
 `
 
 // Top
-const TopImageCover = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 0px;
-`
+// const TopImageCover = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 60px 0px;
+// `
 
 // vidion内容
 const VisionListCover = styled.dl`
+  margin-top: 30px;
+
   &:not(:first-of-type) {
     margin-top: 60px;
   }
@@ -136,9 +138,9 @@ export default function Home() {
       <MainCover>
         <HeaderText>〜私達の理念〜</HeaderText>
 
-        <TopImageCover>
+        {/* <TopImageCover>
           <div><img src={NoImage} alt=""></img></div>
-        </TopImageCover>
+        </TopImageCover> */}
 
         <VisionListCover>
           <dt>新型コロナウイルス後の<br />
@@ -174,9 +176,21 @@ export default function Home() {
       <Footer>
         <FooterTitle>Mobile Club</FooterTitle>
         <SnsIconCover>
-            <li><img src={TwitterIcon} alt=""></img></li>
-            <li><img src={FacebookIcon} alt=""></img></li>
-            <li><img src={InstagramIcon} alt=""></img></li>
+          <li>
+            <a target="_blank" href="https://twitter.com/mobileclub_corp">
+              <img src={TwitterIcon} alt=""></img>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/MobileclubOfficial">
+              <img src={FacebookIcon} alt=""></img>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/mobileclub_corp">
+              <img src={InstagramIcon} alt=""></img>
+            </a>
+          </li>
         </SnsIconCover>
 
         <CopyrightCover>© Copyright 2020. All rights reserved.</CopyrightCover>

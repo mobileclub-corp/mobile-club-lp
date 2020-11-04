@@ -665,9 +665,21 @@ export default function ToClub() {
       <Footer>
         <FooterTitle>Mobile Club</FooterTitle>
         <SnsIconCover>
-            <li><img src={TwitterIcon} alt=""></img></li>
-            <li><img src={FacebookIcon} alt=""></img></li>
-            <li><img src={InstagramIcon} alt=""></img></li>
+          <li>
+            <a target="_blank" href="https://twitter.com/mobileclub_corp">
+              <img src={TwitterIcon} alt=""></img>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/MobileclubOfficial">
+              <img src={FacebookIcon} alt=""></img>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/mobileclub_corp">
+              <img src={InstagramIcon} alt=""></img>
+            </a>
+          </li>
         </SnsIconCover>
 
         <CopyrightCover>© Copyright 2020. All rights reserved.</CopyrightCover>

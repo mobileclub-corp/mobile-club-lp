@@ -315,6 +315,10 @@ const CurrentDescriptionCover = styled.dd`
 `
 
 const CurrentDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &:not(:first-of-type) {
     margin-top: 20px;
   }
@@ -323,7 +327,13 @@ const CurrentDescription = styled.div`
     margin: 30px 0 13px;
   }
 
+  > figcaption {
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+
   > p {
+    width: 250px;
     font-family: YuGothic;
     font-weight: 500;
     font-size: 14px;
@@ -414,10 +424,10 @@ const MazuwaKaiintourokuButtonCover = styled.div`
 `
 
 const PromotionCover = styled.div`
-  height: 428px;
+  // height: 428px;
   padding: 60px 15px;
-  background: #f8f7f3;
-  box-sizing: border-box;
+  // background: #f8f7f3;
+  // box-sizing: border-box;
 `
 
 const SecurityCover = styled.div`
@@ -567,26 +577,20 @@ export default function ToMan() {
                 <CurrentDescriptionCover>
                     <CurrentDescription>
                     <figure><img src={NoImage} alt=""></img></figure>
-                    <figcaption>Aさん</figcaption>
-                    <p>これはダミー文字です。これはダミー文字です。これはダミー文字です。これはダミー文字です。これはダミー文字です。</p>
+                    <figcaption>某高級クラブ ホステス シングルマザー</figcaption>
+                    <p>20歳の時から銀座のクラブで働いています。10代で未婚で子供を産んで、子育てしながら働いてきました。この世界、シンママ率が高く子育てに関して助け合ったりする環境が整っているんです。売上を持っているような一部のホステスは別として、一般のホステスの稼ぎは世の中で思われてるほどよくありません。自粛明けも私たちのような売上のないホステスは出勤が規制されて、以前の収入の半分以下になり、違法な性風俗店に流れている同僚もいます。うちの店も性産業関係は御法度なんですが、食べていかなきゃいけないので、、、目を瞑っています。</p>
                     </CurrentDescription>
 
                     <CurrentDescription>
                     <figure><img src={NoImage} alt=""></img></figure>
-                    <figcaption>Bさん</figcaption>
-                    <p>これはダミー文字です。これはダミー文字です。これはダミー文字です。これはダミー文字です。これはダミー文字です。</p>
+                    <figcaption>某ラウンジのオーナー</figcaption>
+                    <p>オイルショックやバブルなど全部経験し何度も苦しい状況を乗り越えてきましたが、こんなにひどいのは初めてです。感染防止の対策を取っていますが、酷かったときは売り上げが以前の80％から90％ほど減少してしまって、今も半分以下です、感染が収まらないとこれ以上経営を続けられないです。</p>
                     </CurrentDescription>
 
                     <CurrentDescription>
                     <figure><img src={NoImage} alt=""></img></figure>
-                    <figcaption>Cさん</figcaption>
-                    <p>これはダミー文字です。これはダミー文字です。これはダミー文字です。これはダミー文字です。これはダミー文字です。</p>
-                    </CurrentDescription>
-
-                    <CurrentDescription>
-                    <figure><img src={NoImage} alt=""></img></figure>
-                    <figcaption>Dさん</figcaption>
-                    <p>これはダミー文字です。これはダミー文字です。これはダミー文字です。これはダミー文字です。これはダミー文字です。</p>
+                    <figcaption>某高級クラブ　オーナーママ</figcaption>
+                    <p>私達は基本的に通常の融資も受けられません。初めて国から保証をいただき、初めて人として認められたような気がしました。本当に感謝しています。ですが、それでも尚厳しい状況は続いています｡景気が悪いときはこれまでもありましたが私たちが頑張ることを､誰かに止められはしなかったので･･利益がギリギリ出るという売り上げラインは、月に約7000万円ほど｡しかし､営業を自粛してからは売り上げが消滅｡家賃は約600万円｡従業員への給料や諸経費も約600万円かかり､月1200万円ほどの支出だけが2か月続いています｡今も月の売上は戻らず赤字が続いています。</p>
                     </CurrentDescription>
                 </CurrentDescriptionCover>
                 </IntroductionDescriptionCover>
@@ -638,13 +642,13 @@ export default function ToMan() {
             </MissionCover>
 
             <PromotionCover id="promotion">
-                <IntroductionTitle>MISSION</IntroductionTitle>
+                {/* <IntroductionTitle>MISSION</IntroductionTitle>
                 <IntroductionDescriptionCover>
                 <dt>プロモーション映像</dt>
                 <dd>
                     <video></video>
                 </dd>
-                </IntroductionDescriptionCover>
+                </IntroductionDescriptionCover> */}
             </PromotionCover>
 
             <SecurityCover>
@@ -660,9 +664,21 @@ export default function ToMan() {
         <Footer>
           <FooterTitle>Mobile Club</FooterTitle>
           <SnsIconCover>
-            <li><img src={TwitterIcon} alt=""></img></li>
-            <li><img src={FacebookIcon} alt=""></img></li>
-            <li><img src={InstagramIcon} alt=""></img></li>
+            <li>
+              <a target="_blank" href="https://twitter.com/mobileclub_corp">
+                <img src={TwitterIcon} alt=""></img>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/MobileclubOfficial">
+                <img src={FacebookIcon} alt=""></img>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.instagram.com/mobileclub_corp">
+                <img src={InstagramIcon} alt=""></img>
+              </a>
+            </li>
           </SnsIconCover>
 
           <CopyrightCover>© Copyright 2020. All rights reserved.</CopyrightCover>
