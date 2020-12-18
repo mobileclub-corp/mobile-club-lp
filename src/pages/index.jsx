@@ -209,7 +209,7 @@ const WhatsMobileClubCover = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0px;
+  margin-top: 50px;
   color: #000;
   background: #ffeaeb;
 
@@ -470,6 +470,12 @@ const CopyrightCover = styled.div`
   letter-spacing: 0.04em;
 `
 
+const Youtube = styled.iframe`
+padding: 100px 0px;
+width: 100%;
+height: 300px;
+`
+
 export default function Home() {
   return (
     <Container>
@@ -508,6 +514,7 @@ export default function Home() {
             そんな女性の為、安定して働く場所を提供したい!という想いで私たちはこのシステムを開発しました。</p>
           </WhatsMobileClubText>
         </WhatsMobileClubCover>
+        <Youtube src="https://www.youtube.com/embed/uSwV-9KtgBQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
         <HowToEarnTitle>＼お店に属しているから安心／</HowToEarnTitle>
         <HowToEarnCover>
           <HowToEarn>

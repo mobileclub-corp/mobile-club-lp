@@ -19,6 +19,10 @@ import TwitterIcon from '../../assets/images/sp/twitterIcon.png';
 import FacebookIcon from '../../assets/images/sp/facebookIcon.png';
 import InstagramIcon from '../../assets/images/sp/instagramIcon.png';
 
+const MainCover = styled.main`
+  background: #ffeaeb;
+`
+
 const Container = styled.div`
   position: relative;
   width: 378px;
@@ -90,7 +94,7 @@ const TopTitleCover = styled.div`
   width: 320px;
   height: 95px;
   margin: 0 auto;
-  padding: 68px 0 33px;
+  padding: 90px 0 33px;
   font-family: YuMincho;
   font-style: normal;
   font-weight: 800;
@@ -173,7 +177,7 @@ const LineAdd = styled.div`
 
 const IntroductionCover = styled.div`
   max-width: 375px;
-  margin: 60px auto 0;
+  margin: 60px 0;
 `
 
 const IntroductionTitle =styled.h3`
@@ -233,10 +237,8 @@ const HowToEarn = styled.div`
 
 const AboutStepCover = styled.dd`
   ${mediaquery.desktop`
-    display: flex;
     justify-content: space-between;
-    width: 804px;
-    margin: 0 auto;
+    width: 100%;
   `}
 `
 
@@ -289,7 +291,6 @@ const NoDeaikei = styled.dl`
 `
 
 const CurrentCover = styled.div`
-  position: relative;
   top: -12px;
   z-index: -1;
   padding: 74px 15px;
@@ -310,7 +311,7 @@ const CurrentCover = styled.div`
 
 const CurrentDescriptionCover = styled.dd`
   ${mediaquery.desktop`
-    display: flex;
+    width: 100%;
     justify-content: space-between;
   `}
 `
@@ -506,6 +507,12 @@ const CopyrightCover = styled.div`
   letter-spacing: 0.04em;
 `
 
+const Youtube = styled.iframe`
+padding: 0px 0px;
+width: 100%;
+height: 300px;
+`
+
 export default function ToMan() {
     return (
       <Container>
@@ -515,16 +522,13 @@ export default function ToMan() {
           <FollowLineButtonBottom><a href="https://line.me/R/ti/p/@842zcnjv" target="_blank" rel="noreferrer noopener">LINE＠ 友達追加</a></FollowLineButtonBottom>
         </FollowLineButton>
 
-        <main>
+        <MainCover>
             <TopCover>
                 <TopTitleCover>
                     <h1>Mobile Club<br/>
                     ワンランク上の稼ぎ方<br/>
                     <span>出店×ホステスマッチングサービス</span></h1>
                 </TopTitleCover>
-
-                <TopTextCover>＼2020.11.15リリース予定／</TopTextCover>
-
                 <LineAddCover>
                     <LineAddText>まずは<span>LINE@友達追加</span>をしましょう！</LineAddText>
                     <LineAdd><a href="https://line.me/R/ti/p/@842zcnjv" target="_blank" rel="noreferrer noopener">LINE＠ 友達追加</a></LineAdd>
@@ -540,11 +544,7 @@ export default function ToMan() {
                 時間をご提供するシステムです。<br/>
                 お好みの女性、飲食店を選んで、<br/>
                 素敵なひと時をご堪能ください。</dd>
-                <HowToEarnCover>
-                  <HowToEarn>
-                    <div><img src={FourRunkImage} alt=""></img></div>
-                  </HowToEarn>
-                </HowToEarnCover>
+ 
                 <AboutStepCover>
                     <AboutStep>
                     <figure><img src={StepImage_01} alt=""></img></figure>
@@ -582,13 +582,11 @@ export default function ToMan() {
                     <figcaption>某高級クラブ ホステス シングルマザー</figcaption>
                     <p>20歳の時から銀座のクラブで働いています。10代で未婚で子供を産んで、子育てしながら働いてきました。この世界、シンママ率が高く子育てに関して助け合ったりする環境が整っているんです。売上を持っているような一部のホステスは別として、一般のホステスの稼ぎは世の中で思われてるほどよくありません。自粛明けも私たちのような売上のないホステスは出勤が規制されて、以前の収入の半分以下になり、違法な性風俗店に流れている同僚もいます。うちの店も性産業関係は御法度なんですが、食べていかなきゃいけないので、、、目を瞑っています。</p>
                     </CurrentDescription>
-
                     <CurrentDescription>
                     <figure><img src={NoImage} alt=""></img></figure>
                     <figcaption>某ラウンジのオーナー</figcaption>
                     <p>オイルショックやバブルなど全部経験し何度も苦しい状況を乗り越えてきましたが、こんなにひどいのは初めてです。感染防止の対策を取っていますが、酷かったときは売り上げが以前の80％から90％ほど減少してしまって、今も半分以下です、感染が収まらないとこれ以上経営を続けられないです。</p>
                     </CurrentDescription>
-
                     <CurrentDescription>
                     <figure><img src={NoImage} alt=""></img></figure>
                     <figcaption>某高級クラブ　オーナーママ</figcaption>
@@ -644,15 +642,14 @@ export default function ToMan() {
             </MissionCover>
 
             <PromotionCover id="promotion">
-                {/* <IntroductionTitle>MISSION</IntroductionTitle>
+                <IntroductionTitle>MISSION</IntroductionTitle>
                 <IntroductionDescriptionCover>
                 <dt>プロモーション映像</dt>
                 <dd>
-                    <video></video>
+                  <Youtube src="https://www.youtube.com/embed/uSwV-9KtgBQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
                 </dd>
-                </IntroductionDescriptionCover> */}
+                </IntroductionDescriptionCover>
             </PromotionCover>
-
             <SecurityCover>
                 <SecurityIconCover><img src={SecurityIcon} alt=""></img></SecurityIconCover>
                 <SecurityDescriptionCover>
@@ -661,8 +658,7 @@ export default function ToMan() {
                 </SecurityDescriptionCover>
             </SecurityCover>
             </IntroductionCover>
-        </main>
-
+        </MainCover>
         <Footer>
           <FooterTitle>Mobile Club</FooterTitle>
           <SnsIconCover>
@@ -682,7 +678,6 @@ export default function ToMan() {
               </a>
             </li>
           </SnsIconCover>
-
           <CopyrightCover>© Copyright 2020. All rights reserved.</CopyrightCover>
         </Footer>
       </Container>
