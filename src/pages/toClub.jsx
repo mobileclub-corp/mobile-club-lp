@@ -514,9 +514,6 @@ export default function ToClub() {
             ワンランク上の稼ぎ方<br/>
             <span>出店×ホステスマッチングサービス</span></h1>
           </TopTitleCover>
-
-          <TopTextCover>＼2020.11.15リリース予定／</TopTextCover>
-
           <LineAddCover>
             <LineAddText>まずは<span>LINE@友達追加</span>をしましょう！<br />
             チャット内で詳しい内容はしっかりとご案内致します♪</LineAddText>
