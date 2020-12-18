@@ -19,6 +19,11 @@ import TwitterIcon from '../../assets/images/sp/twitterIcon.png';
 import FacebookIcon from '../../assets/images/sp/facebookIcon.png';
 import InstagramIcon from '../../assets/images/sp/instagramIcon.png';
 
+// Main
+const MainCover = styled.main`
+  background: #ffeaeb;
+`
+
 const Container = styled.div`
   position: relative;
   width: 378px;
@@ -90,7 +95,7 @@ const TopTitleCover = styled.div`
   width: 320px;
   height: 95px;
   margin: 0 auto;
-  padding: 68px 0 33px;
+  padding: 100px 0 33px;
   font-family: YuMincho;
   font-style: normal;
   font-weight: 800;
@@ -200,7 +205,9 @@ const IntroductionDescriptionCover = styled.dl`
     font-size: 16px;
 
     &:not(:first-of-type){
+      max-width: 375px;
       margin: 40px auto;
+      
     }
 
     > p {
@@ -233,7 +240,6 @@ const HowToEarn = styled.div`
 
 const AboutStepCover = styled.dd`
   ${mediaquery.desktop`
-    display: flex;
     justify-content: space-between;
     width: 804px;
     margin: 0 auto;
@@ -289,7 +295,6 @@ const NoDeaikei = styled.dl`
 `
 
 const CurrentCover = styled.div`
-  position: relative;
   top: -12px;
   z-index: -1;
   padding: 74px 15px;
@@ -310,7 +315,6 @@ const CurrentCover = styled.div`
 
 const CurrentDescriptionCover = styled.dd`
   ${mediaquery.desktop`
-    display: flex;
     justify-content: space-between;
   `}
 `
@@ -506,6 +510,12 @@ const CopyrightCover = styled.div`
   letter-spacing: 0.04em;
 `
 
+const Youtube = styled.iframe`
+padding: 0px 0px;
+width: 100%;
+height: 300px;
+`
+
 export default function ToMan() {
     return (
       <Container>
@@ -515,16 +525,13 @@ export default function ToMan() {
           <FollowLineButtonBottom><a href="https://line.me/R/ti/p/@842zcnjv" target="_blank" rel="noreferrer noopener">LINE＠ 友達追加</a></FollowLineButtonBottom>
         </FollowLineButton>
 
-        <main>
+        <MainCover>
             <TopCover>
                 <TopTitleCover>
                     <h1>Mobile Club<br/>
                     ワンランク上の稼ぎ方<br/>
                     <span>出店×ホステスマッチングサービス</span></h1>
                 </TopTitleCover>
-
-                <TopTextCover>＼2020.11.15リリース予定／</TopTextCover>
-
                 <LineAddCover>
                     <LineAddText>まずは<span>LINE@友達追加</span>をしましょう！</LineAddText>
                     <LineAdd><a href="https://line.me/R/ti/p/@842zcnjv" target="_blank" rel="noreferrer noopener">LINE＠ 友達追加</a></LineAdd>
@@ -540,11 +547,6 @@ export default function ToMan() {
                 時間をご提供するシステムです。<br/>
                 お好みの女性、飲食店を選んで、<br/>
                 素敵なひと時をご堪能ください。</dd>
-                <HowToEarnCover>
-                  <HowToEarn>
-                    <div><img src={FourRunkImage} alt=""></img></div>
-                  </HowToEarn>
-                </HowToEarnCover>
                 <AboutStepCover>
                     <AboutStep>
                     <figure><img src={StepImage_01} alt=""></img></figure>
@@ -644,13 +646,13 @@ export default function ToMan() {
             </MissionCover>
 
             <PromotionCover id="promotion">
-                {/* <IntroductionTitle>MISSION</IntroductionTitle>
+                <IntroductionTitle>MISSION</IntroductionTitle>
                 <IntroductionDescriptionCover>
                 <dt>プロモーション映像</dt>
                 <dd>
-                    <video></video>
+                  <Youtube src="https://www.youtube.com/embed/uSwV-9KtgBQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
                 </dd>
-                </IntroductionDescriptionCover> */}
+                </IntroductionDescriptionCover>
             </PromotionCover>
 
             <SecurityCover>
@@ -661,7 +663,7 @@ export default function ToMan() {
                 </SecurityDescriptionCover>
             </SecurityCover>
             </IntroductionCover>
-        </main>
+        </MainCover>
 
         <Footer>
           <FooterTitle>Mobile Club</FooterTitle>

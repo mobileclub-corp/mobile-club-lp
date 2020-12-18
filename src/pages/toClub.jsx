@@ -212,7 +212,6 @@ const NextToVisionCover = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 100px;
   text-align: center;
 `
 
@@ -492,6 +491,12 @@ const CopyrightCover = styled.div`
   letter-spacing: 0.04em;
 `
 
+const Youtube = styled.iframe`
+padding: 100px 0px;
+width: 100%;
+height: 300px;
+`
+
 export default function ToClub() {
   return (
     <Container>
@@ -508,9 +513,6 @@ export default function ToClub() {
             ワンランク上の稼ぎ方<br/>
             <span>出店×ホステスマッチングサービス</span></h1>
           </TopTitleCover>
-
-          <TopTextCover>＼2020.11.15リリース予定／</TopTextCover>
-
           <LineAddCover>
             <LineAddText>まずは<span>LINE@友達追加</span>をしましょう！<br />
             チャット内で詳しい内容はしっかりとご案内致します♪</LineAddText>
@@ -533,6 +535,7 @@ export default function ToClub() {
         <NextToVisionCover>
           <NextToVisionLink to="/vision">〜私達の理念〜</NextToVisionLink>
         </NextToVisionCover>
+        <Youtube src="https://www.youtube.com/embed/uSwV-9KtgBQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
         <HowToEarnTitle>＼競合しないので安心／</HowToEarnTitle>
         <HowToEarnCover>
           <HowToEarn>
